@@ -1,0 +1,310 @@
+<GDInfos>
+    <GDInfo name="gevent_cavein" class="GDEvent_CaveIn">
+        <components>
+            <comp class="CProperties">
+                <min_days>20460</min_days>
+                <trigger_chance_percent>1</trigger_chance_percent>
+                <reset_time_hours>4096</reset_time_hours>
+            </comp>
+        </components>
+    </GDInfo>
+<!-- loot tweeks-->
+    <GDInfo name="ltable_foodchest" class="GDLootTable">
+        <p duplicates="true" num_rounds="5" />
+        <item probability="100" id="ltable_food" count="1" />        
+        <item probability="80" id="dscgrp_datalogs" count="1" unique="true" />
+    </GDInfo>
+    
+    <GDInfo name="ltable_mineralchest" class="GDLootTable">
+        <p duplicates="true" num_rounds="15" />
+        <item probability="75" id="ltable_ingots" count="3" />
+        <item probability="20" id="ltable_ores" count="1" />                        
+        <item probability="80" id="dscgrp_datalogs" count="1" unique="true" />
+    </GDInfo>
+    
+    <GDInfo name="ltable_techchest" class="GDLootTable">   
+        <p duplicates="true" num_rounds="10" />
+        <item probability="100" id="res_electronics" count="5" />
+        <item probability="100" id="res_mechparts" count="5" />        
+        <item probability="10" id="res_steel" count="5" />
+        <item probability="5" id="ltable_techfragments" count="2" />
+        <item probability="80" id="dscgrp_datalogs" count="1" unique="true" />
+        <item probability="60" id="ltable_blueprints_t1" count="1" unique="true" /> 
+        <item probability="5" id="ltable_rndobjectequipment" count="1" />   
+        <item probability="5" id="ltable_rndcolonistequipment" count="1" />
+        <item probability="5" id="ltable_rndvehicleequipment" count="1" />
+    </GDInfo>
+    
+    <GDInfo name="ltable_organicschest" class="GDLootTable">
+         <p duplicates="true" num_rounds="10" />
+        <item probability="100" id="ltable_raworganics" count="1" />        
+        <item probability="50" id="ltable_refinedorganics" count="1" />
+        <item probability="5" id="currency_geneticsamples" count="5" />
+        <item probability="2" id="res_hemp_seed" count="1" />        
+        <item probability="2" id="res_potato_seed" count="1" />        
+        <item probability="80" id="dscgrp_datalogs" count="1" unique="true" />                
+    </GDInfo>
+
+<!-- charge pad -->
+	<GEInfo name="charge_pad" class="ERobotRechargeStation">
+		<components>
+			<comp class="CGraphicModel">
+				<resource_path>Objects/ChargePad</resource_path>
+				<connect_type>Single</connect_type>
+			</comp>	
+			<comp class="CProperties">					
+				<rotatable>true</rotatable>
+				<size type="IntVec2">1,2</size>
+				<ui_icon>Objects/icon_ChargePad</ui_icon>				
+				<ui_struct_cat>uisc_utility</ui_struct_cat>	
+				<collider>true</collider>
+				<walkable>true</walkable>
+				<research_needed></research_needed>
+				<required_floor></required_floor>
+				<recharge_rate>15</recharge_rate>
+				<power_needed>50</power_needed>
+				<footprint>
+					W
+					X
+				</footprint>
+			</comp>		
+			<comp class="CBuildable">
+				<menu_category>General</menu_category>
+				<work_amt>15</work_amt>
+				<resources>
+					<item name="res_iron">10</item>
+					<item name="res_bioplastic">10</item>
+					<item name="res_copper">5</item>
+				</resources>
+			</comp>		
+			<comp class="CDurability">
+                <max>150</max>
+            </comp>
+			<comp class="CElectricConsumer"></comp>
+			<comp class="CDecorProvider">
+				<amount>-0.1</amount>
+				<range>2</range>
+			</comp>
+			<comp class="CEquipment">
+                <max_allowed>2</max_allowed>
+            </comp>			
+			<comp class="CInteractSpot">
+				<!-- cell_offset: Relative to primary cell in north direction  -->
+				<cell_offset>0, 0</cell_offset>
+				<!-- position: Local space position from object pivot  -->
+				<position>0, 0</position>
+				<point_name>charge</point_name>
+			</comp>
+		</components>		
+	</GEInfo>
+
+<!-- crop disease -->
+    <GDInfo name="gevent_cropdisease" class="GDEvent_CropDisease">
+        <components>
+            <comp class="CProperties">
+                <min_days>20460</min_days>
+                <trigger_chance_percent>1</trigger_chance_percent>
+                <reset_time_hours>20460</reset_time_hours>
+            </comp>
+        </components>
+    </GDInfo>
+
+<!-- Robot Move/Work Speed-->
+    <GDInfo name="rb_worker_movespeed" class="GDAttribute">
+        <components>
+            <comp class="CProperties">
+                <tags>c_movespeed</tags>
+                <min>4</min>
+                <max>4</max>
+                <current>4</current>    
+                <show_ui_section>true</show_ui_section>
+                <ui_icon>GenUI/IconMoveSpeed</ui_icon>
+            </comp>
+        </components>
+    </GDInfo>
+    
+    <GDInfo name="rb_driller_movespeed" class="GDAttribute">
+        <components>
+            <comp class="CProperties">
+                <tags>c_movespeed</tags>
+                <min>4</min>
+                <max>4</max>
+                <current>4</current>    
+                <show_ui_section>true</show_ui_section>
+                <ui_icon>GenUI/IconMoveSpeed</ui_icon>
+            </comp>
+        </components>
+    </GDInfo>
+    
+    <!-- Work Speed is used as a delay timer. Lower # = faster work -->
+    <GDInfo name="c_workspeed" class="GDAttribute">
+        <components>
+            <comp class="CProperties">
+                <tags>c_workspeed</tags>
+                <min>0.1</min>
+                <max>4</max>
+                <current>4</current>    
+                <show_ui_section>true</show_ui_section>
+                <ui_icon>GenUI/IconWork</ui_icon>
+            </comp>
+        </components>
+    </GDInfo>
+
+    <GDInfo name="bot_walker" class="GDColonistRobot">
+		<components>			
+			<comp class="CProperties">	
+			    <entity_id>bot_walker_entity</entity_id>
+				<group>cgrp_robot</group>
+				<gender type="enum:EGender">Either</gender>
+				<profession_cap>10</profession_cap>
+				<num_outfitcolors>2</num_outfitcolors>
+				<default_outfitcolors>#FC9A02/#204388</default_outfitcolors>
+				<sfx_hurt>Audio/Colonists/sfx_robot_hurt</sfx_hurt>
+				<sfx_death>Audio/Colonists/sfx_robot_death</sfx_death>
+				<portrait_cam_offset>-0.385 0.321 0.8</portrait_cam_offset>
+				<portrait_cam_rotation>7.69 150 0</portrait_cam_rotation>
+				<ui_icon>Objects/icon_InactiveRobot</ui_icon>
+				<allow_jobs>
+					prof_builder
+					/prof_miner
+					/prof_haul
+					/prof_technician
+                    /prof_engineer
+				</allow_jobs>				
+			</comp>				
+			<comp class="CAttributesColonist">
+				<list>
+					<i>c_health</i>
+					<i>c_power</i>					
+					<i>c_smarts</i>
+					<i>c_muscles</i>
+					<i>c_athletics</i>
+					<i>rb_worker_movespeed</i>
+					<i>c_workspeed</i>
+				</list>
+			</comp>
+			
+			<comp class="CEquipment">
+                <max_allowed>5</max_allowed>
+            </comp>  
+			
+			<comp class="CInventory">
+				<max_items>1000</max_items>
+			</comp>
+		</components>
+	</GDInfo>
+	
+	<GDInfo name="bot_deepdriller" class="GDColonistRobot">
+		<components>			
+			<comp class="CProperties">	
+			    <entity_id>bot_deepdriller_entity</entity_id>
+				<group>cgrp_robot</group>
+				<gender type="enum:EGender">Either</gender>
+				<profession_cap>10</profession_cap>
+				<num_outfitcolors>2</num_outfitcolors>
+				<default_outfitcolors>#FC9A02/#1A1A1A</default_outfitcolors>
+				<sfx_hurt>Audio/Colonists/sfx_robot_hurt</sfx_hurt>
+				<sfx_death>Audio/Colonists/sfx_robot_death</sfx_death>
+				<portrait_cam_offset>-0.484 0.543 1.154</portrait_cam_offset>
+				<portrait_cam_rotation>6.116 156.4 0.69</portrait_cam_rotation>
+				<ui_icon>Objects/icon_bot_deepdriller</ui_icon>								
+				<allow_jobs>				
+					prof_miner
+                    /prof_haul					
+				</allow_jobs>				
+			</comp>			
+						
+			<comp class="CAttributesColonist">
+				<list>
+					<i>c_health</i>
+					<i>c_power</i>					
+					<i>c_smarts</i>
+					<i>c_muscles</i>
+					<i>c_athletics</i>
+					<i>rb_driller_movespeed</i>
+					<i>c_workspeed</i>
+				</list>
+			</comp>
+			
+			<comp class="CEquipment">
+                <max_allowed>5</max_allowed>
+            </comp>						
+						
+			<comp class="CInventory">
+				<max_items>100</max_items>
+			</comp>
+		</components>
+	</GDInfo>
+
+    <GDInfo name="object_durability_drain" class="GDAttribute">
+        <components>
+            <comp class="CProperties">
+                <tags></tags>
+                <min>0</min>
+                <max>100</max>                
+                <current>1</current>
+                <change_rate>-0.001</change_rate>                                
+            </comp>
+        </components>
+    </GDInfo>
+
+    <GDInfo name="c_muscles" class="GDAttribute">
+        <components>
+            <comp class="CProperties">
+                <tags>c_muscles</tags>
+                <min>9</min>
+                <max>10</max>                
+                <current>10</current>     
+                <show_ui_section>true</show_ui_section>
+                <ui_icon>GenUI/IconMuscles</ui_icon>
+            </comp>
+        </components>
+    </GDInfo>
+    
+    <!-- 10% bonus to job experience gain per point of smarts -->
+    <GDInfo name="c_smarts" class="GDAttribute">
+        <components>
+            <comp class="CProperties">
+                <tags>c_smarts</tags>
+                <min>9</min>
+                <max>10</max>                
+                <current>10</current>  
+                <show_ui_section>true</show_ui_section>
+                <ui_icon>GenUI/IconSmarts</ui_icon>
+            </comp>
+        </components>
+    </GDInfo>
+    
+    <!-- bonus to move speed per point of athletics -->
+    <GDInfo name="c_athletics" class="GDAttribute">
+        <components>
+            <comp class="CProperties">
+                <tags>c_athletics</tags>
+                <min>9</min>
+                <max>10</max>                
+                <current>10</current>
+                <show_ui_section>true</show_ui_section>     
+                <ui_icon>GenUI/IconAthletics</ui_icon>
+            </comp>
+        </components>
+    </GDInfo>
+
+    <GDInfo name="c_power" class="GDAttribute">
+        <components>
+            <comp class="CProperties">
+                <tags>c_power</tags>
+                <min>0</min>
+                <max>100</max>
+                <current>100</current>      
+                <change_rate>-0.10</change_rate>
+                <action_threshold>0.05</action_threshold>
+                <show_ui_section>true</show_ui_section>
+                <ui_icon>GenUI/IconPower</ui_icon>
+                <is_need>true</is_need>
+            </comp>
+        </components>
+    </GDInfo>
+
+
+
+</GDInfos>

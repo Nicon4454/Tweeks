@@ -1,0 +1,237 @@
+<GEInfos>
+	<GEInfo name="storage_crate_mk1_v" class="EStorageContainer">
+		<components>
+			<comp class="CGraphicModel">
+				<resource_path>Objects/StorageCrate_V</resource_path>
+				<connect_type>Single</connect_type>
+			</comp>
+			<comp class="CProperties">				
+				<rotatable>true</rotatable>
+				<size type="IntVec2">1,2</size>				
+				<ui_struct_cat>uisc_storage</ui_struct_cat>
+				<ui_icon>Objects/icon_StorageCrate_V</ui_icon>
+				<collider>true</collider>				
+				<durability>15</durability>
+				<footprint>
+					W
+					X
+				</footprint>
+				<allow_disable>true</allow_disable>
+			</comp>
+			<comp class="CBuildable">
+				<work_amt>10</work_amt>
+				<resources>
+					<item name="res_structresin">20</item>					
+				</resources>
+			</comp>
+			<comp class="CObjectColorChange">
+				<num_colors>1</num_colors>
+				<color_1_default>#F6B16F</color_1_default>
+			</comp>
+			<comp class="CInventory">
+				<max_items>200000</max_items>
+				<ui_showallowitems>true</ui_showallowitems>
+				<allowed_types>it_mineral/it_metal/it_raworganic/it_refinedorganic/it_fuel/it_technology/it_vehicle_equipment/it_object_equipment/it_colonist_equipment/it_expedition_supplies</allowed_types>
+			</comp>
+			<comp class="CEquipment">
+                <max_allowed>1</max_allowed>
+            </comp>
+		</components>
+	</GEInfo>
+	
+	<GEInfo name="storage_cropbin" class="ECropBin">
+		<components>
+			<comp class="CGraphicModel">
+				<resource_path>Objects/CropBin</resource_path>
+				<connect_type>Single</connect_type>
+			</comp>
+			<comp class="CProperties">				
+				<rotatable>true</rotatable>
+				<size type="IntVec2">2,2</size>				
+				<ui_struct_cat>uisc_storage</ui_struct_cat>
+				<ui_icon>Objects/icon_CropBin</ui_icon>
+				<collider>true</collider>				
+				<durability>15</durability>
+				<footprint>
+					WW
+					XX
+				</footprint>
+				<allow_disable>true</allow_disable>
+			</comp>
+			<comp class="CBuildable">
+				<work_amt>10</work_amt>
+				<resources>
+					<item name="res_structresin">20</item>					
+				</resources>
+			</comp>
+			<comp class="CObjectColorChange">
+				<num_colors>1</num_colors>
+				<color_1_default>#F6B16F</color_1_default>
+			</comp>
+			<comp class="CInventory">
+				<max_items>200000</max_items>
+				<ui_showallowitems>true</ui_showallowitems>
+				<allowed_types>it_raworganic/it_seeds/it_rawfood</allowed_types>
+			</comp>
+			<comp class="CEquipment">
+                <max_allowed>1</max_allowed>
+            </comp>
+		</components>
+	</GEInfo>
+	
+	<GEInfo name="dataserver" class="EDataServer">
+		<components>
+			<comp class="CGraphicModel">
+				<resource_path>Objects/DataServer</resource_path>
+				<connect_type>Single</connect_type>
+			</comp>
+			<comp class="CProperties">				
+				<rotatable>true</rotatable>
+				<size type="IntVec2">1,2</size>				
+				<ui_struct_cat>uisc_storage</ui_struct_cat>
+				<ui_icon>Objects/icon_DataServer</ui_icon>
+				<collider>true</collider>				
+				<durability>15</durability>				
+				<required_floor>rm_floor_science</required_floor>
+				<research_needed>rsch_dataservers</research_needed>
+				<footprint>
+					W
+					X
+				</footprint>
+				<allow_disable>true</allow_disable>
+			</comp>
+			<comp class="CBuildable">
+				<work_amt>15</work_amt>
+				<resources>
+					<item name="res_bioplastic">20</item>	
+					<item name="res_structresin">10</item>
+					<item name="res_electronics">15</item>
+				</resources>
+			</comp>			
+			<comp class="CCurrencyCapProvider">
+				<currency_id>currency_research</currency_id>
+				<amt>1500</amt>
+			</comp>
+			<comp class="CElectricConsumer">  
+                <consumption_amt>50</consumption_amt>
+            </comp>
+			
+		</components>
+	</GEInfo>
+
+	<GEInfo name="storage_fridge" class="EStorageContainer">
+		<components>
+			<comp class="CGraphicModel">
+				<resource_path>Objects/Fridge</resource_path>
+				<connect_type>Single</connect_type>
+			</comp>
+			<comp class="CProperties">				
+				<rotatable>true</rotatable>
+				<size type="IntVec2">1,2</size>	
+				<required_floor></required_floor>				
+				<ui_struct_cat>uisc_storage</ui_struct_cat>
+				<ui_icon>Objects/icon_Fridge</ui_icon>
+				<research_needed>rsch_foodprep</research_needed>
+				<collider>true</collider>
+				<footprint>
+					W
+					X
+				</footprint>
+				<durability>15</durability>
+				<allow_disable>true</allow_disable>
+			</comp>
+			<comp class="CBuildable">
+				<work_amt>15</work_amt>
+				<resources>
+					<item name="res_iron">10</item>
+					<item name="res_bioplastic">5</item>
+				</resources>
+			</comp>
+			<comp class="CInventory">
+				<max_items>200000</max_items>
+				<ui_showallowitems>true</ui_showallowitems>
+				<allowed_types>it_rawfood</allowed_types>
+			</comp>	
+			<comp class="CObjectColorChange">
+				<num_colors>1</num_colors>
+				<color_1_default>#b3b3b3</color_1_default>
+			</comp>
+			<comp class="CElectricConsumer">  
+                <consumption_amt>10</consumption_amt>
+            </comp>
+			<comp class="CEquipment">
+                <max_allowed>2</max_allowed>
+            </comp>
+		</components>
+	</GEInfo>
+	
+	<GEInfo name="storage_fooddispenser" class="EStorageContainer">
+		<components>
+			<comp class="CGraphicModel">
+				<resource_path>Objects/FoodDispenser</resource_path>
+				<connect_type>Single</connect_type>
+			</comp>
+			<comp class="CProperties">				
+				<rotatable>true</rotatable>
+				<size type="IntVec2">1,2</size>	
+				<required_floor></required_floor>				
+				<ui_struct_cat>uisc_storage</ui_struct_cat>
+				<ui_icon>Objects/icon_FoodDispenser</ui_icon>
+				<research_needed>rsch_dining</research_needed>
+				<collider>true</collider>
+				<footprint>
+					W
+					X
+				</footprint>
+				<durability>15</durability>
+				<allow_disable>true</allow_disable>
+			</comp>
+			<comp class="CBuildable">
+				<work_amt>15</work_amt>
+				<resources>
+					<item name="res_steel">8</item>
+					<item name="res_bioplastic">15</item>
+				</resources>
+			</comp>
+			<comp class="CInventory">
+				<max_items>5000</max_items>
+				<ui_showallowitems>true</ui_showallowitems>
+				<allowed_types>it_food</allowed_types>
+			</comp>	
+			<comp class="CObjectColorChange">
+				<num_colors>1</num_colors>
+				<color_1_default>#FF0000</color_1_default>
+			</comp>
+			<comp class="CElectricConsumer">  
+                <consumption_amt>10</consumption_amt>
+            </comp>
+			<comp class="CEquipment">
+                <max_allowed>2</max_allowed>
+            </comp>
+		</components>
+	</GEInfo>
+
+	<GEInfo name="creative_power_gen" class="EStructure">
+		<components>
+			<comp class="CGraphicModel">
+				<resource_path>Objects/CreativeObject1x1</resource_path>
+				<connect_type>Single</connect_type>
+			</comp>			 
+			<comp class="CProperties">			
+				<ui_icon></ui_icon>				
+				<collider>true</collider>
+                <durability>15</durability>				
+			</comp>
+			<comp class="CBuildable">
+				<work_amt>15</work_amt>
+			</comp>
+			<comp class="CElectricCreator"> 
+				<max_output>1000</max_output>				
+            </comp>			
+			<comp class="CEquipment">
+                <max_allowed>2</max_allowed>
+            </comp>
+		</components>		
+	</GEInfo>
+
+</GEInfos>
