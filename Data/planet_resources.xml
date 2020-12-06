@@ -1,0 +1,271 @@
+<GDInfos>
+    
+    <GDInfo name="pres_ironore" class="GDPlanetResource">
+        <components>
+            <comp class="CProperties">
+                <entity_id>pd_ore_iron</entity_id>
+                <spawn_frequency>0.001</spawn_frequency>
+                <resource_id>res_ironore</resource_id>
+                <spawnonfreshwater>false</spawnonfreshwater>
+                <spawnonocean>false</spawnonocean>
+                <spawnonland>true</spawnonland>
+                <allowed_biomes></allowed_biomes>
+                <res_type type="enum:ESurfaceResType">Ore</res_type>
+                <hovericon_unknown>ui_ehi_oreresourceunknown</hovericon_unknown>                                
+            </comp>
+            
+        </components>
+    </GDInfo>
+    
+    <GEInfo name="pd_ore_iron" class="ESurfaceResource">
+        <components>
+            <comp class="CGraphicModel">
+                <resource_path>PlanetDetails/pm_harvestableresource</resource_path>
+                <connect_type>Single</connect_type>
+            </comp>	
+            <comp class="CProperties">                
+                <collider>true</collider> 
+                <ui_icon>Items/IconIronOre</ui_icon>
+                <vision_range>-1</vision_range>
+            </comp>     
+            <comp class="CSurfaceHarvestable">
+                <surface_minamount>1000</surface_minamount>
+                <surface_maxamount>2000</surface_maxamount>
+                <subsurface_minamount>5000</subsurface_minamount>
+                <subsurface_maxamount>10000</subsurface_maxamount>
+                <deep_minamount>10000</deep_minamount>
+                <deep_maxamount>20000</deep_maxamount>
+            </comp>
+        </components>
+    </GEInfo>
+    
+    <GDInfo name="pres_copperore" class="GDPlanetResource">
+        <components>
+            <comp class="CProperties">
+                <entity_id>pd_ore_copper</entity_id>
+                <spawn_frequency>0.001</spawn_frequency>
+                <resource_id>res_copperore</resource_id>
+                <spawnonfreshwater>false</spawnonfreshwater>
+                <spawnonocean>false</spawnonocean>
+                <spawnonland>true</spawnonland>
+                <allowed_biomes></allowed_biomes>
+                <res_type type="enum:ESurfaceResType">Ore</res_type>
+                <hovericon_unknown>ui_ehi_oreresourceunknown</hovericon_unknown>
+            </comp>
+        </components>
+    </GDInfo>
+    
+    <GEInfo name="pd_ore_copper" class="ESurfaceResource">
+        <components>
+            <comp class="CGraphicModel">
+                <resource_path>PlanetDetails/pm_harvestableresource</resource_path>
+                <connect_type>Single</connect_type>
+            </comp>	
+            <comp class="CProperties">                
+                <collider>true</collider> 
+                <ui_icon>Items/IconCopperOre</ui_icon>
+                <vision_range>-1</vision_range>
+            </comp>
+            <comp class="CSurfaceHarvestable">
+                <surface_minamount>1000</surface_minamount>
+                <surface_maxamount>2000</surface_maxamount>
+                <subsurface_minamount>5000</subsurface_minamount>
+                <subsurface_maxamount>10000</subsurface_maxamount>
+                <deep_minamount>10000</deep_minamount>
+                <deep_maxamount>20000</deep_maxamount>
+            </comp>
+        </components>
+    </GEInfo>
+    
+    <GDInfo name="pres_anthraciteore" class="GDPlanetResource">
+        <components>
+            <comp class="CProperties">
+                <entity_id>pd_ore_anthracite</entity_id>
+                <spawn_frequency>0.001</spawn_frequency>
+                <resource_id>res_coalore</resource_id>
+                <spawnonfreshwater>false</spawnonfreshwater>
+                <spawnonocean>false</spawnonocean>
+                <spawnonland>true</spawnonland>
+                <allowed_biomes></allowed_biomes>
+                <res_type type="enum:ESurfaceResType">Ore</res_type>
+                <hovericon_unknown>ui_ehi_oreresourceunknown</hovericon_unknown>
+            </comp>
+        </components>
+    </GDInfo>
+    
+    <GEInfo name="pd_ore_anthracite" class="ESurfaceResource">
+        <components>
+            <comp class="CGraphicModel">
+                <resource_path>PlanetDetails/pm_harvestableresource</resource_path>
+                <connect_type>Single</connect_type>
+            </comp>	
+            <comp class="CProperties">                
+                <collider>true</collider>
+                <ui_icon>Items/IconCoalOre</ui_icon>
+                <vision_range>-1</vision_range>
+            </comp>
+            <comp class="CSurfaceHarvestable">
+                <surface_minamount>1000</surface_minamount>
+                <surface_maxamount>2000</surface_maxamount>
+                <subsurface_minamount>5000</subsurface_minamount>
+                <subsurface_maxamount>10000</subsurface_maxamount>
+                <deep_minamount>10000</deep_minamount>
+                <deep_maxamount>20000</deep_maxamount>
+            </comp>
+        </components>
+    </GEInfo>
+    
+    <GDInfo name="pres_minerals" class="GDPlanetResource">
+        <components>
+            <comp class="CProperties">
+                <entity_id>pd_ore_minerals</entity_id>
+                <spawn_frequency>0.001</spawn_frequency>
+                <resource_id>res_mineral</resource_id>
+                <spawnonfreshwater>false</spawnonfreshwater>
+                <spawnonocean>false</spawnonocean>
+                <spawnonland>true</spawnonland>
+                <allowed_biomes></allowed_biomes>
+                <res_type type="enum:ESurfaceResType">Ore</res_type>
+                <hovericon_unknown>ui_ehi_oreresourceunknown</hovericon_unknown>
+            </comp>
+        </components>
+    </GDInfo>
+    
+    <GEInfo name="pd_ore_minerals" class="ESurfaceResource">
+        <components>
+            <comp class="CGraphicModel">
+                <resource_path>PlanetDetails/pm_harvestableresource</resource_path>
+                <connect_type>Single</connect_type>
+            </comp>	
+            <comp class="CProperties">
+                <collider>true</collider>
+                <ui_icon>Items/IconMineral</ui_icon>
+                <vision_range>-1</vision_range>
+            </comp>
+            <comp class="CSurfaceHarvestable">
+                <surface_minamount>500</surface_minamount>
+                <surface_maxamount>1000</surface_maxamount>
+                <subsurface_minamount>2000</subsurface_minamount>
+                <subsurface_maxamount>5000</subsurface_maxamount>
+                <deep_minamount>5000</deep_minamount>
+                <deep_maxamount>10000</deep_maxamount>
+            </comp>
+        </components>
+    </GEInfo>
+    
+    <GDInfo name="pres_sand" class="GDPlanetResource">
+        <components>
+            <comp class="CProperties">
+                <entity_id>pd_ore_sand</entity_id>
+                <spawn_frequency>0.01</spawn_frequency>
+                <resource_id>res_sand</resource_id>
+                <spawnonfreshwater>false</spawnonfreshwater>
+                <spawnonocean>false</spawnonocean>
+                <spawnonland>true</spawnonland>
+                <allowed_biomes>pbiome_beach/pbiome_scorched</allowed_biomes>
+                <res_type type="enum:ESurfaceResType">Ore</res_type>
+                <hovericon_unknown>ui_ehi_oreresourceunknown</hovericon_unknown>
+            </comp>
+        </components>
+    </GDInfo>
+    
+    <GEInfo name="pd_ore_sand" class="ESurfaceResource">
+        <components>
+            <comp class="CGraphicModel">
+                <resource_path>PlanetDetails/pm_harvestableresource</resource_path>
+                <connect_type>Single</connect_type>
+            </comp>	
+            <comp class="CProperties">
+                <collider>true</collider>
+                <ui_icon>Items/IconSand</ui_icon>
+                <vision_range>-1</vision_range>
+            </comp>
+            <comp class="CSurfaceHarvestable">
+                <surface_minamount>1000</surface_minamount>
+                <surface_maxamount>2000</surface_maxamount>
+                <subsurface_minamount>5000</subsurface_minamount>
+                <subsurface_maxamount>10000</subsurface_maxamount>
+                <deep_minamount>10000</deep_minamount>
+                <deep_maxamount>20000</deep_maxamount>
+            </comp>
+        </components>
+    </GEInfo>
+    
+    <GDInfo name="pres_titaniumore" class="GDPlanetResource">
+        <components>
+            <comp class="CProperties">
+                <entity_id>pd_ore_titanium</entity_id>
+                <spawn_frequency>0.002</spawn_frequency>
+                <resource_id>res_titaniumore</resource_id>
+                <spawnonfreshwater>false</spawnonfreshwater>
+                <spawnonocean>false</spawnonocean>
+                <spawnonland>true</spawnonland>
+                <allowed_biomes>pbiome_scorched/pbiome_tropicaldesert/pbiome_desertscrub/pbiome_chaparral/pbiome_subtropicaldesert</allowed_biomes>
+                <res_type type="enum:ESurfaceResType">Ore</res_type>
+                <hovericon_unknown>ui_ehi_oreresourceunknown</hovericon_unknown>
+            </comp>
+        </components>
+    </GDInfo>
+    
+    <GEInfo name="pd_ore_titanium" class="ESurfaceResource">
+        <components>
+            <comp class="CGraphicModel">
+                <resource_path>PlanetDetails/pm_harvestableresource</resource_path>
+                <connect_type>Single</connect_type>
+            </comp>	
+            <comp class="CProperties">
+                <collider>true</collider>
+                <ui_icon>Items/IconTitaniumOre</ui_icon>
+                <vision_range>-1</vision_range>
+            </comp>
+            <comp class="CSurfaceHarvestable">
+                <surface_minamount>1000</surface_minamount>
+                <surface_maxamount>2000</surface_maxamount>
+                <subsurface_minamount>5000</subsurface_minamount>
+                <subsurface_maxamount>10000</subsurface_maxamount>
+                <deep_minamount>10000</deep_minamount>
+                <deep_maxamount>20000</deep_maxamount>
+            </comp>
+        </components>
+    </GEInfo>
+    
+    <GDInfo name="pres_goldore" class="GDPlanetResource">
+        <components>
+            <comp class="CProperties">
+                <entity_id>pd_ore_gold</entity_id>
+                <spawn_frequency>0.002</spawn_frequency>
+                <resource_id>res_goldore</resource_id>
+                <spawnonfreshwater>false</spawnonfreshwater>
+                <spawnonocean>false</spawnonocean>
+                <spawnonland>true</spawnonland>
+                <allowed_biomes>pbiome_tundrawet/pbiome_tundraarctic/pbiome_tundrarocky/pbiome_borealrainforest/pbiome_borealforest</allowed_biomes>
+                <res_type type="enum:ESurfaceResType">Ore</res_type>
+                <hovericon_unknown>ui_ehi_oreresourceunknown</hovericon_unknown>
+            </comp>
+        </components>
+    </GDInfo>
+    
+    <GEInfo name="pd_ore_gold" class="ESurfaceResource">
+        <components>
+            <comp class="CGraphicModel">
+                <resource_path>PlanetDetails/pm_harvestableresource</resource_path>
+                <connect_type>Single</connect_type>
+            </comp>	
+            <comp class="CProperties">
+                <collider>true</collider>
+                <ui_icon>Items/IconGoldOre</ui_icon>
+                <vision_range>-1</vision_range>
+            </comp>
+            <comp class="CSurfaceHarvestable">
+                <surface_minamount>1000</surface_minamount>
+                <surface_maxamount>2000</surface_maxamount>
+                <subsurface_minamount>5000</subsurface_minamount>
+                <subsurface_maxamount>10000</subsurface_maxamount>
+                <deep_minamount>10000</deep_minamount>
+                <deep_maxamount>20000</deep_maxamount>
+            </comp>
+        </components>
+    </GEInfo>
+
+</GDInfos>
+
